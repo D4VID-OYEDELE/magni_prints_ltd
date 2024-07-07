@@ -1,0 +1,190 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+html body header.header{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    z-index: 2;
+    background-color: yellow;
+}
+
+img.logo{
+    width: 50px;
+}
+
+header.header nav.navbar div#close{
+    display: none;
+    position: absolute;
+    top: 3.5rem;
+    right: 2rem;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+}
+
+header.header nav.navbar a{
+    font-size: 4rem;
+    margin-right: 2rem;
+    color: white;
+    text-decoration: none;
+}
+
+body header.header div#menu{
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 3rem;
+}
+
+header.header nav.navbar a:hover{
+    color: red;
+}
+
+html body section.home{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    padding: 0 2rem;
+}
+
+body section.home div.content{
+    flex: 1 1 40rem;
+    padding-top: 6.5rem;
+}
+
+section.home div.content h1.title{
+    color: lightblue;
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+div.content h1.title span{
+    text-transform: uppercase;
+    color: blue;
+}
+
+section.home div.content p.desc{
+    color: red;
+    font-size: 2rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+}
+
+
+
+section.home div.content a.btn{
+    background-color: #d3ad7f;
+    color: white;
+    margin-top: 1rem;
+    font-size: 2rem;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+body section.home div.image{
+    flex: 1 1 40rem;
+}
+
+section.home div.image img{
+    width: 100%;
+}
+
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 2rem;
+    }
+}
+
+@media(max-width: 768px){
+    body header.header div#menu{
+        display: inline-block;
+    }
+    
+    body header.header nav.navbar{
+        position: fixed;
+        top: 0;
+        right: -105%;
+        width: 30rem;
+        background-color: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(50px);
+        height: 100vh;
+        transition: 0.5s;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        z-index: 1200;
+    }
+
+    body header.header nav.navbar.active{
+        right: 0;
+    }
+
+    header.header nav.navbar div#close{
+        display: block;
+    }
+
+    header.header nav.navbar a{
+        font-size: 3rem;
+        display: block;
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    body section.home div.content{
+        padding-top: 9.5rem;
+    }
+
+    section.home div.content h1.title{
+        font-size: 4rem;
+    }
+
+    section.home div.content p.desc{
+        font-size: 1.6rem;
+    }
+
+    body section.home div.image{
+        width: 368px;
+    }
+}
+
+@media(max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
+
+
+
+
+
+
